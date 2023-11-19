@@ -1,5 +1,7 @@
+'use client'
+
 import { useEffect, useState } from 'react'
-import requests from '@/services/requests'
+import requests from '../services/requests'
 import NavBar from './navBar'
 import Section from './section'
 import Carousel from './carousel'
@@ -25,6 +27,7 @@ const User = () => {
     fetch(`${baseURL}${requests.fetchTopRated}`)
       .then((res) => res.json())
       .then((data) => {
+        console.log(data)
         setHeroMovie(data?.results[0])
       })
   }, [])

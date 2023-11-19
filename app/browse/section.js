@@ -1,13 +1,15 @@
-import N from '../../public/images/N.svg'
-import Top from '../../public/images/Top10.svg'
+/* eslint-disable jsx-a11y/alt-text */
+// import N from '../../public/images/N.svg'
+// import Top from '../../public/images/Top10.svg'
 import { InformationCircleIcon, PlayIcon } from '@heroicons/react/20/solid'
+import Image from 'next/image'
 
 const Section = ({ heroMovie }) => {
   return (
     <div className='text-white border-white w-2/3 max-h-xs mt-14 z-10'>
       <div className='flex items-center'>
         <div className='mr-6 mb-6 gap-4 flex items-center'>
-          <N />
+          <Image src={'images/Top10.svg'} width={30} height={30} />
           <div>
             <p className='text-lg text-slate-300 font-semibold tracking-widest'>
               MOVIES
@@ -17,7 +19,7 @@ const Section = ({ heroMovie }) => {
       </div>
       <div className='font-serif text-6xl mt-6 mb-8'>{heroMovie?.title}</div>
       <div className='flex items-center gap-3 mb-3'>
-        <Top />
+        <Image src={'images/N.svg'} width={20} height={20} />
         <p className='text-lg'>#1 in TV Movies Today</p>
       </div>
       <div className='text-[10px]'>{heroMovie?.overview}</div>

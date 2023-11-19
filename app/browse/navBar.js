@@ -1,9 +1,11 @@
-import NetflixLogo from '../../public/images/Vector.svg'
+/* eslint-disable jsx-a11y/alt-text */
+// import NetflixLogo from '../../public/images/Vector.svg'
 import {
   BellIcon,
   MagnifyingGlassIcon,
   ChevronDownIcon
 } from '@heroicons/react/20/solid'
+import Image from 'next/image'
 import Link from 'next/link'
 
 const ROUTES = [
@@ -19,7 +21,7 @@ const NavBar = () => {
   return (
     <header className='flex justify-between items-center bg-gradient-to-b from-black from-15% to-transparent z-10 pt-6'>
       <div className='flex items-center'>
-        <NetflixLogo />
+        <Image src={'/images/Vector.svg'} width={200} height={100} />
         <div className='ml-6'>
           {ROUTES.map((routes, i) => (
             <Link key={i} href={routes.link} className='text-white mx-2'>
